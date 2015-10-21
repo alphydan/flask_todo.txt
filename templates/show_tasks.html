@@ -1,0 +1,165 @@
+{% extends "layout.html" %}
+
+{% block imports %}
+<style type="text/css">
+.project-tag{ margin-left:-12px;  padding-right: 12px; font-size: 1.3em; color: #717171;}
+.task-list{ margin-top: -72px;}
+.task-list li {
+  padding: 8px 10px 1px 10px;
+  margin: 0.5rem 0 0.1rem 0;
+}
+
+.task-list li p {
+  margin-top: -2px;
+  margin-bottom: 2px;
+}
+.time-button {
+color:black; margin-bottom: 2px;
+color: black;
+}
+</style>
+{% endblock %}
+
+
+{% block body %}
+
+<div class="task-list">
+<div class="row">
+<ul id="dropdown2" class="dropdown-content">
+<li><a href="{{ url_for('show_tasks') }}">All</a></li>
+<li><a href="{{ url_for('tasks_by_priority') }}">priority</a></li>
+<li><a href="{{ url_for('tasks_by_project') }}">+project</a></li>
+  <li><a href="{{ url_for('tasks_by_context') }}">@context</a></li>
+  <li><a href="{{ url_for('tasks_by_duedate') }}">due-date</li>
+</ul>
+
+<div class="right">
+  <a class="btn dropdown-button amber" href="#!" data-activates="dropdown2" style="color: black; margin-bottom:30px;">Sort by: <i class="mdi-navigation-arrow-drop-down right"></i></a>
+</div>
+</div>
+
+<!-- Are there any tasks? -->
+{% if nr_tasks == 0 %}
+<h3> No tasks for your criteria! </h3>
+<p class="flow-text">Go back to the <a href="{{ url_for('show_tasks') }}">full list of tasks</a></p>
+{% endif %}
+
+
+<!-- If there are tasks, list them with their attributes -->
+<ul class=entries>
+  {% for task in tasks %}
+  <li class="card-panel">
+  <div class="row">
+    <div class="col s8 m8 l9 input-field">
+      <p class="flow-text">
+      {% if task.priority or task.priority == 0 %}
+       <a class="btn-floating amber lighten-4" href="{{ url_for('tasks_by_priority', priority = task.priority ) }}">
+        <span style="padding-left:12px; font-weight:bold; color:#616161;"> {{ task.priority }}</span>
+       </a>
+     {% endif %}
+      {{ task.msg }}
+      </p>
+      <div style="padding-left:41px;"><!-- div to space second line with tags & projects -->
+     {% if task.project %}
+      {% for proj in task.project %}
+       <div class="chip grey lighten-5">
+       <a href="{{ url_for('tasks_by_project') }}" class="project-tag">
+        <strong><i class="material-icons left">add_circle</i></strong>
+        {{ proj }}
+         </a>
+       </div>
+      {% endfor %}
+     {% endif %}
+
+     {% if task.context %}
+      {% for cont in task.context %}
+       <div class="chip amber lighten-5">
+       {% if cont == "pc" %}
+        <strong><i class="material-icons left">computer</i></strong>
+        {% endif %}
+
+       {% if cont == "t" %}
+        <strong><i class="material-icons left">phone</i></strong>
+        {% endif %}
+
+       {% if cont == "shop" %}
+        <strong><i class="material-icons left">local_grocery_store </i></strong>
+       {% endif %}
+
+      {% if cont == "e" %}
+        <strong><i class="material-icons left">mail </i></strong>
+       {% endif %}
+
+       {% if cont == "smart" %}
+        <strong><i class="material-icons left">smartphone </i></strong>
+       {% endif %}
+
+        <a href="{{ url_for('tasks_by_context')}}" class="project-tag">{{ cont }}</a>
+
+       </div>
+      {% endfor %}
+     {% endif %}
+     </div><!-- div to space tags -->
+    </div><!--left column -->
+
+    <div class="col s4 m4 l3">
+     {% if task.duedate or task.creation_date or task.time_estimate %}
+      <div class="valign-wrapper right">
+      <i class="material-icons medium">event</i>
+      </div>
+     {% endif %}
+
+     {% if task.creation_date %}
+     <strong>
+     <a class="waves-effect waves-light btn right  grey lighten-5 time-button">
+        <i class="material-icons right">save</i>{{ task.creation_date|adate }}
+      </a>
+    </strong>
+     {% endif %}
+
+     {% if task.time_estimate %}
+     <strong>
+     <a class="waves-effect waves-light btn right amber lighten-5 time-button">
+        <i class="material-icons right">hourglass_empty</i> {{ task.time_estimate|round(1, 'floor') }}h
+      </a>
+    </strong>
+     {% endif %}
+
+     {% if task.duedate %}
+      <strong>
+     <a class="waves-effect waves-light btn right amber lighten-4 time-button" href="{{ url_for('tasks_by_duedate') }}">
+        <i class="material-icons right">hourglass_full</i> {{ task.duedate|adate }}
+      </a>
+    </strong>
+     {% endif %}
+
+
+
+    </div>
+  </div><!-- / row -->
+  </li>
+  {% endfor %}
+
+
+</ul>
+</div>
+{% endblock %}
+
+
+<!-- card with circular image -->
+      <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="images/yuna.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+                This is a square image. Add the "circle" class to it to make it appear circular.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+

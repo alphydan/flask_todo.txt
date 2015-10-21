@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block imports %}
+<script type="text/javascript" src="{{ url_for('static', filename='./js/Chart.min.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+    <canvas id="myChart" width="400" height="400"></canvas>
+</div>
+
+<script type="text/javascript">
+
+var ctx = document.getElementById("myChart").getContext("2d");
+
+var options = { barShowStroke: false }
+//     { //Number - Amount of animation steps
+//     animationSteps : 25,
+
+//     //String - Animation easing effect
+//     animationEasing : "easeOut",
+
+//     //Number - The percentage of the chart that we cut out of the middle
+//     percentageInnerCutout : 20, // This is 0 for Pie charts
+
+//     //Boolean - Whether we animate scaling the Doughnut from the centre
+//     animateScale : true,
+
+//     // Boolean - Whether to show labels on the scale
+//     scaleShowLabels: true,
+
+//     // Interpolated JS string - can access value
+//     // scaleLabel: "<%=value%>",
+// }
+
+// var data = [
+//     {
+//         value: {{ tasks }},
+//         color:"#F7464A",
+//         highlight: "#FF5A5E",
+//         label: "tasks to do"
+//     },
+//     {
+//         value: {{ done }},
+//         color: "#46BFBD",
+//         highlight: "#5AD3D1",
+//         label: "Done!!"
+//     },
+// ]
+
+
+var data = {
+    labels: ["# outstanding tasks", "# tasks Done"],
+    datasets: [
+        {
+            label: "My First dataset",
+            fillColor: "rgba(220,220,220,0.5)",
+            strokeColor: "rgba(220,220,220,0.8)",
+            highlightFill: "rgba(220,220,220,0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [{{ tasks }}, {{ done }}]
+        }
+    ]
+};
+
+var myBarChart = new Chart(ctx).Bar(data, options);
+// var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
+</script>
+{% endblock %}
+
+

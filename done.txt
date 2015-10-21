@@ -1,0 +1,19 @@
+x (A) Pay UpWork workers.
+x (A) Ping D.E. for payment
+x (A) Contact InfoGroup for quote on data for 10,000 addresses
+x (A) Book appointment Dr. Alicante. due:2015-01-26 @t
+x 2015-01-30 Haircut Javea due:2014-01-27 @shop
+x (C) Book Chiropractor
+x (B) Call antonia to pay repair due:2015-01-29 @t 2015-01-19
+x (A) Llamar para lugares de bodas en Gredos @t @e due:2015-02-11
+x (C) Shopping [papel cocina, desatascador, top-up yoigo, gonzalo + stella correos]  @shop +home due:2015-02-11
+x (E) Reply to Andres @e @pc
+x (E) Ask abdul about 30kg/35eur.
+x (C) Book Restaurante Mezquida @t due:2015-02-11
+x (C) top-up Yoigo @pc @t
+x (A) Pay Delaware tax online @pc DUE:2015-02-14
+x (A) SUP judge 10 applications @pc @t
+x (A) Change SIM to GiffGaff @t @e
+x (A) Order Gas repsol (260EUR, check there is enough in Joint account) @pc @t +home
+x (C) Calculation of fuel / rent for christmas @e @pc +family
+x (A) Call Avios (British Airways Executive Club) to inquire about points @pc @t

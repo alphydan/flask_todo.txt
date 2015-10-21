@@ -1,0 +1,47 @@
+(A) Create Fask app to display todo.txt list [3d] +productivity-hacks +freelance 2015-10-21 due:2015-10-25 @pc
+(B) Write tutorial on Fask app to display todo.txt list [8h] +code +productivity-hacks +freelance 2015-10-21 due:2015-10-25 @pc
+(A) buy milk, bread, salad (tomato, lettuce, nuts, cucumber), vinagre @shop +family [1h]
+(A) Make bank transfer +feitobros @pc [30mn]
+(A) Send invoice to Company Inc. +freelance @pc @smart due:2015-10-23 [20mn]
+
+(B) Finish votatu.es scraping engine @pc +freelance due:2015-11-5 [3d]
+(C) Change highlight behaviour sublime (not double but single ctrl-spacebar) [15mn] @pc +productivity-hacks
+(D) sublime, change ctrl-k delete behaviour (delete immediately, not after moving) @pc +productivity-hacks
+(D) .bash_aliases "cdpy todo", pass parameter? @pc +productivity-hacks
+
+(D) Read python tutorial http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/
+(B) Make Standing desk, http://bit.ly/1N7qnNh, http://bit.ly/1EFnIcC, http://bit.ly/1qnnxXM, http://bit.ly/1N7re0w, http://bit.ly/1UrlAw9, http://bit.ly/1NeTIXQ
+(B) Ask for pictures (Andrew & Spain crew)
+
+
+
+(A) Task for handover: How to deploy? (fab, pull, restart?) +renooble-dev
+
+(A) Merge UpWork list of 93 top companies [4h] @pc +renooble-sales
+(A) Create simple Pitch Deck +renooble-funding @pc [6h]
+(A) application for IDIN Microgrants @pc due:2015-05-26 https://www.idin.org/opportunities/grants/idin-microgrant-applications-now-open
+(D) Write down ABC, read book
+
+
+(B) Contact company XYZ @t +freelance
+
+(A) Close Rackspace account @t @pc
+
+
+
+(B) Evaluate cost of mapping All of California @pc [8h]
+(B) bio and pics for website @pc @e +IDDS due:2015-06-10
+(B) share application for IDDS lahore @pc @e +IDDS due:2015-06-10
+
+(C) Update investors mailchimp email @pc +renooble-funding
+(D) Stock Option Purchase Agreement @pc +renooble-legal due:2015-03-01
+
+(E) Article for Allison (Wind Recycling) -> Emerson @pc @e +renooble-marketing
+(E) Re-contact Emerson <-> Jeremy <-> Acerinox @e +network
+(E) Output print list (http://www.cssscript.com/demo/a-nice-to-do-list-app-with-angular-js/) @pc
+(E) Use Base API and convert deals in Visual Chart of Customers +renooble-sales due:2015-03-01 @pc
+(E) Finish Quantum Physics articles medium due:2015-12-19
+(F) Letter to people who can't use solar (community, green utility, etc)
+@t @e 2015-01-19 +renooble-project (B) Call antonia to pay repair due:2015-01-29
+(F) @pc +learn +code learn elm, http://gelatindesign.co.uk/developing-games-in-elm/functional-programming/ & tutorial http://elm-lang.org/Install.elm https://github.com/evancz/elm-architecture-tutorial#the-elm-architecture
+(F) @pc buy some books http://www.medialens.org/index.php/current-alert-sp-298539227/cogitations-archive/56-mind-training-part-2.html [1yr]

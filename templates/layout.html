@@ -1,0 +1,76 @@
+<!doctype html>
+
+<head>
+<meta charset="utf-8">
+<title>Todo List in a Flask</title>
+<!-- Material Files -->
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='./css/materialize.min.css') }}" media="screen, projection">
+
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+{% block imports %}{% endblock %}
+
+<!-- Own files -->
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='./css/style.css') }}">
+
+</head>
+
+<body>
+
+<!-- <nav role="navigation">
+  <div class="nav-wrapper container">
+  </div>
+</nav>
+ -->
+ <div class="row">
+  <a href="#" data-activates="slide-out" class="button-collapse show-on-large" style="color: black;">
+    <i class="mdi-navigation-menu medium amber"></i>
+  </a>
+  <span class=""><i class="material-icons medium">reply</i>click for options!</span>
+</div>
+
+<ul id="slide-out" class="side-nav">
+  <li class="amber">
+    <div class="valign-wrapper" style="height: 100px">
+     <img class="valign responsive-im" height="100px" src="{{ url_for('static', filename='./img/tdflask.png') }}" />
+   </div>
+ </li>
+ <li><a href="{{ url_for('show_tasks') }}">To Do</a></li>
+ <li><a href="{{ url_for('show_done') }}">Done</a></li>
+ <li><a href="{{ url_for('show_stats') }}">Statistics</a></li>
+  <li><a href="#">About this list</a></li>
+</ul>
+<div class="row">
+<div class="col s10 m10 l10 offset-s1 offset-m1 offset-l1"> <!-- Note that "m8 l9" was added -->
+  <div class="page-content">
+
+      {% for message in get_flashed_messages() %}
+        <div class=flash>{{ message }}</div>
+      {% endfor %}
+
+    {% block body %}{% endblock %}
+  </div>
+ </div>
+
+
+        <!-- Teal page content
+
+              This content will be:
+          9-columns-wide on large screens,
+          8-columns-wide on medium screens,
+          12-columns-wide on small screens  -->
+
+</div>
+</div><!-- / row -->
+
+</body>
+<script type="text/javascript" src="{{ url_for('static', filename='./js/jquery-2.1.4.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='./js/materialize.min.js') }}"></script>
+<script type="text/javascript">
+  // Initialize collapse button
+ $(".button-collapse").sideNav();
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  // $('.collapsible').collapsible();
+</script>
+</html>
