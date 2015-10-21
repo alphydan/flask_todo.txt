@@ -22,7 +22,7 @@ and added a few of my own:
 
 A text file, however makes it difficult to sort, organize, prioritize and extract statistics. So this web app addresses precisely that.  Once you have created a `todo.txt` and `done.txt`, you can run this Flask application, and explore your list:
 
-![Screenshot of the list](./statid/img/todo_list_screenshot.png)
+![Screenshot of the list](./static/img/todo_list_screenshot.png)
 
 This will let you:
 
