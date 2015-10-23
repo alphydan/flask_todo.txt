@@ -33,3 +33,28 @@
   -ms-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
+
+.project-tag{ margin-left:-12px;  padding-right: 12px; font-size: 1.3em; color: #717171;}
+
+.task-list{ margin-top: -72px; }
+
+.task-list li {
+  padding: 8px 10px 1px 10px;
+  margin: 0.5rem 0 0.1rem 0;
+}
+
+.task-list li p {
+  margin-top: -2px;
+  margin-bottom: 2px;
+}
+.time-button {
+color:black; margin-bottom: 2px;
+color: black;
+}
+.priority-pill{
+  padding-left:12px; font-weight:bold; color:#616161;
+}
+.strike-done{
+   text-decoration: line-through;
+   color: #999;
+}

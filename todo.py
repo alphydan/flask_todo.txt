@@ -1,4 +1,3 @@
-
 #!flask/bin/python
 
 import datetime
@@ -28,17 +27,31 @@ def show_tasks():
 
 
 @app.route('/todo/project/')
-def tasks_by_project():
+@app.route('/todo/project/<project>')
+def tasks_by_project(project=None):
     tasks_with_project = [t for t in tasks if t['project']]
-    sorted_with_project = sorted(tasks_with_project, key=lambda x: x['project'])
+    if project:
+        # if the url was /todo/project/family
+        # then keep only those tasks which have "family" in the list of projects
+        sorted_with_project = [t for t in tasks_with_project if \
+                              (project in t['project'])]
+    else:
+        sorted_with_project = sorted(tasks_with_project, key=lambda x: x['project'])
     return render_template('show_tasks.html',
                            tasks=sorted_with_project, isdone=False)
 
 
 @app.route('/todo/context/')
-def tasks_by_context():
+@app.route('/todo/context/<context>')
+def tasks_by_context(context=None):
     tasks_with_context = [t for t in tasks if t['context']]
-    sorted_with_context = sorted(tasks_with_context, key=lambda x: x['context'])
+    if context:
+        # if the url was /todo/project/pc
+        # then keep only those tasks which have "pc" in the list of contexts
+        sorted_with_context = [t for t in tasks_with_context if \
+                              (context in t['context'])]
+    else:
+        sorted_with_context = sorted(tasks_with_context, key=lambda x: x['context'])
     return render_template('show_tasks.html',
                            tasks=sorted_with_context, isdone=False)
 
@@ -68,8 +81,7 @@ def tasks_by_priority(priority=None):
 @app.route('/todo/done')
 def show_done():
     # tasks = todo_to_dictionary_list("done.txt")
-    isdone = True
-    return render_template('show_tasks.html', tasks=done, isdon=isdone)
+    return render_template('show_tasks.html', tasks=done, isdone=True)
 
 
 @app.route('/todo/stats')

@@ -1,4 +1,4 @@
-# A flask app to display Todo.txt 
+# A flask app to display my todo.txt 
 
 I keep my todo list in a text file. This has numerous advantages like:
 
@@ -8,9 +8,9 @@ I keep my todo list in a text file. This has numerous advantages like:
 - fast to open / edit / save / load (online or offline)
 
 Inspired by [todotxt.com](http://todotxt.com/), I have adopted [Gina Trapani's conventions](https://github.com/ginatrapani/todo.txt-cli/wiki/The-Todo.txt-Format):
-
+ 
 - `(A)`, `(B)`, `(C)`, ...  encode priority
-- `@pc`, `@smart`, `@t`, ... encode context (can it be done over the phone, on the pc, etc)
+- `@pc`, `@smart`, `@t`, ... encode context (can it be done over the phone?, on the pc?, etc)
 - `+finance`, `+freelancing`, ... encodes the project (what larger project is it part of?)
 - `2015-10-03`, as a creation date
 - `x `, to show the task is done

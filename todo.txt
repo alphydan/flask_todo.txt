@@ -1,5 +1,5 @@
-(A) Create Fask app to display todo.txt list [3d] +productivity-hacks +freelance 2015-10-21 due:2015-10-25 @pc
-(B) Write tutorial on Fask app to display todo.txt list [8h] +code +productivity-hacks +freelance 2015-10-21 due:2015-10-25 @pc
+(A) Create Flask app to display todo.txt list [3d] +productivity-hacks +freelance 2015-10-21 due:2015-10-25 @pc
+(B) Write tutorial on Flask app to display todo.txt list [8h] +code +productivity-hacks +freelance 2015-10-21 due:2015-10-25 @pc
 (A) buy milk, bread, salad (tomato, lettuce, nuts, cucumber), vinagre @shop +family [1h]
 (A) Make bank transfer +feitobros @pc [30mn]
 (A) Send invoice to Company Inc. +freelance @pc @smart due:2015-10-23 [20mn]
