@@ -1,3 +1,0 @@
-# configuration
-
-DEBUG = True

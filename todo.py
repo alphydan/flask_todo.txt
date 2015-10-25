@@ -6,16 +6,16 @@ from flask import Flask, jsonify, abort, make_response, \
                   request, g, redirect, url_for, render_template, \
                   flash, session
 
-# Config Imports
-from config import *
+# Config
+DEBUG = True
 
 # Todo App inports
 from todo_reader import todo_to_dictionary_list
 from jinjafilters import adate
 
 app = Flask(__name__)
-tasks = todo_to_dictionary_list("todo.txt")
-done = todo_to_dictionary_list("done.txt")
+tasks = todo_to_dictionary_list("list/todo.txt")
+done = todo_to_dictionary_list("list/done.txt")
 
 # register the custom jinja filter with the environment variable:
 app.jinja_env.filters['adate'] = adate # date filter
