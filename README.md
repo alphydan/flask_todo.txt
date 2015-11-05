@@ -49,7 +49,7 @@ run:
 
 ## Is it ready for production?
 
-> No, no, hell no!  This software was built as a project to learn Flask, and to be used locally.  It has major security flaws and should not be deployed to production yet.
+> No, no, no and no!  This software was built as a project to learn Flask, and to be used locally.  It has major security flaws and should not be deployed to production yet.
 
 # Future fancy features to add to the todo:
 
